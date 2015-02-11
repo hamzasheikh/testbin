@@ -21,6 +21,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+# This is created by python setup.py sdist from MANIFEST.in
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -55,3 +57,5 @@ target/
 
 # tmp directory
 tmp/
+# Created on OS X
+.DS_Store

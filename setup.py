@@ -3,13 +3,13 @@ from distutils.core import setup
 
 setup(
     name="testbin",
-    version="0.0.1",
+    version="0.0.6",
     author="Hamza Sheikh",
     author_email="code@codeghar.com",
     url="https://github.com/hamzasheikh/testbin",
     description="Testbin is a library of Python modules and scripts built to help with software testing.",
     license="MIT",
-    packages=['testbin'],
+    packages=['testbin', 'testbin.parser'],
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",

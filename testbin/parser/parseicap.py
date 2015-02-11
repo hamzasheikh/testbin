@@ -2,7 +2,7 @@
 from pyparsing import Combine, Group, Literal, oneOf, OneOrMore, Optional, \
                       Token, White, Word, ZeroOrMore, \
                       alphas, alphas8bit, alphanums, hexnums, nums, printables
-import parseurl
+from testbin.parser import parseurl
 
 octet = [chr(i) for i in range(0,256)]
 OCTET = oneOf(octet)

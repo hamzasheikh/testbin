@@ -4,8 +4,6 @@ from os.path import basename
 import keyring
 import keyrings
 
-service = "testbin"  # Change this value based on your requirements
-
 
 class EncryptedKeyring_(keyrings.alt.file.EncryptedKeyring):
     def _unlock(self):
@@ -34,11 +32,13 @@ class Keyring():
 
         self.keyring = keyring.set_keyring(encrypted_keyring)
 
+        self.service = "testbin"  # Change this value based on your requirements
+
     def get(key):
-        return self.keyring.get_password(service, key)
+        return self.keyring.get_password(self.service, key)
 
     def add(key, value):
-        return self.keyring.set_password(service, key, value)
+        return self.keyring.set_password(self.service, key, value)
 
     def remove(key):
-        return self.keyring.delete_password(service, key)
+        return self.keyring.delete_password(self.service, key)
